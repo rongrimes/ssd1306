@@ -2,6 +2,10 @@
 This text is in active development: March 30, 2022  
 Content to come:
 * font module
+***
+
+![Desktop setup](pico+ssd1306.png)
+
 
 ***
 
@@ -10,7 +14,7 @@ I had a new pico on my desktop along with an [Adafruit SSD1306 OLED display unit
 ***
 
 ## Inspiration:
-The "hard" part of the code came from the guys in Delhi at techatronic[techatronic](https://techatronic.com/) (Hey, thanks guys!), with the base SPI and device driver code.
+The "hard" part of the code came from the guys in Delhi at [techatronic](https://techatronic.com/) (Hey, thanks guys!), with the base SPI and device driver code.
 
 Their page [SSD1306 RASPBERRY PI PICO](https://techatronic.com/ssd1306-raspberry-pi-pico/) has the wiring and driver code (`ssd1306.py`), which I have included in the file list.
 
@@ -34,6 +38,7 @@ This program cycles through the following:
 * brief clock display
 * simple counter
 * simple 8 pixel text from framebuf
+* simple box and cross lines
 * line draw vertical
 * line draw horizontal
 * rectangle draw, going out
@@ -62,11 +67,11 @@ The clock in the videos shows real time. This is only because I started the cloc
 ***
 
 ## Design Limitation
-The device I have is the SSD1306 128x32 SPI device. This means (obviously) that there are 32 horizontal lines. What is less obvious is that the line are number 1,3,5,7... The code takes this into account.
+I have the SSD1306 128x32 SPI device. This means (obviously) that there are 32 horizontal lines. What is less obvious is that the lines are numbered 1,3,5,7... The code takes this into account.
 
-However the code is "not 64 line" ready, meaning... for a 64 line display, the code needs to be reviwed and adjusted accordingly. (I'll fix the code if/when I get a 64 line display - anyone want to send me a SSD1306 128x64 OLED device?)
+However the code is "not 64 line" ready, meaning... for a 64 line display, the code needs to be reviewed and adjusted accordingly. (I'll fix the code if/when I get a 64 line display - anyone want to send me a SSD1306 128x64 OLED device?)
 
 ***
 
 ## Power Pack
-The video shows the pico and OLED being drived by a 9.6V NiMH power pack running a little UBEC 5-23V > 5V 3A converter. It's a great little package for rechargeable power and low cost power components.
+The video shows the pico and OLED being driven by a 9.6V NiMH power pack running a little [UBEC 5-23V > 5V 3A converter](https://www.aliexpress.com/item/590427933.html). It's a great little package for rechargeable power and low cost power components.
