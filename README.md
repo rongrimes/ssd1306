@@ -1,7 +1,11 @@
 # Raspberry Pi Pico with SPI SSD1306 display
-This text in active devlopment: March 30, 2022
+This text is in active development: March 30, 2022  
+Content to come:
+* font module
 
-I had a new pico on my desktop along with an Adafruit SSD1306 OLED display unit, and the exercise was to the diplay unit to do pretty stuff.
+***
+
+I had a new pico on my desktop along with an [Adafruit SSD1306 OLED display unit](https://www.adafruit.com/product/661), and the exercise was for the display unit to do pretty stuff.
 
 ***
 
@@ -46,6 +50,10 @@ Note: the rolling scan lines are a feature of the video process and do not appea
 
 This video simply shows a 20 second period over a minute boundary.
 
+### Clock Notes:
+
+The clock in the videos shows real time. This is only because I started the clock code while the pico was tethered to a raspberry pi host which could initialize the pico RTC (real time clock). After program start, power was supplied by the battery pack and the raspberry pi was disconnected.
+
 ***
 
 #### The font module
@@ -57,3 +65,8 @@ This video simply shows a 20 second period over a minute boundary.
 The device I have is the SSD1306 128x32 SPI device. This means (obviously) that there are 32 horizontal lines. What is less obvious is that the line are number 1,3,5,7... The code takes this into account.
 
 However the code is "not 64 line" ready, meaning... for a 64 line display, the code needs to be reviwed and adjusted accordingly. (I'll fix the code if/when I get a 64 line display - anyone want to send me a SSD1306 128x64 OLED device?)
+
+***
+
+## Power Pack
+The video shows the pico and OLED being drived by a 9.6V NiMH power pack running a little UBEC 5-23V > 5V 3A converter. It's a great little package for rechargeable power and low cost power components.
