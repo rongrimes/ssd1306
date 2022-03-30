@@ -20,10 +20,11 @@ credit: https://techatronic.com/ssd1306-raspberry-pi-pico/
 ***
 
 ## My Demo Programs
-`ssd1306main.py`
-![video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20main%20display.mp4)
-
+### Program: `ssd1306main.py`
+[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20main%20display.mp4)
 (Sorry, you need to view in a separate window for now.)
+
+Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
 This program cycles through the following:
 * brief clock display
@@ -35,16 +36,20 @@ This program cycles through the following:
 
 The clock display and simple counter use the font module.
 
-_______________________________________________________________________________________________________
+***
+### Program: `ssd1306clock.py`
 
-`ssd1306clock.py`
-![video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20clock.mp4)
-
+[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20clock.mp4)
 (Sorry, you need to view in a separate window for now.)
+
+Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
 This video simply shows a 20 second period over a minute boundary.
 
+***
+
 #### The font module
+(Content coming)
 
 ***
 
