@@ -62,12 +62,16 @@ The clock in the videos shows real time. This is only because I started the cloc
 ***
 
 #### The font module
-(Content coming)
+This was interesting. I don't know of any font to pixel translation or such and experimented with different ways. Eventually I found an old program: `printerbanner` on... well this is embarassing really. It was on the Windows Ubuntu platform. Now, I'm not running Ubuntu anywhere (besides the Windows WSL platform) and in particular it's not available on Raspberry PiOS.
+
+`printerbanner` has the feature where you can specify the font size - in my case I wanted a font size of 28 pixels. (See **Design Limitation**: I will need to regenerate the font if I get a 64 line SSD1306 OLED Display).
+
+The font file is mostly just `printerbanner` output redirected, along with a comments feature and a way to label each character. It's not clever, and I didn't even rotate the characters... but it works really well.
 
 ***
 
 ## Design Limitation
-I have the SSD1306 128x32 SPI device. This means (obviously) that there are 32 horizontal lines. What is less obvious is that the lines are numbered 1,3,5,7... The code takes this into account.
+I have the SSD1306 128x32 SPI device. This means (obviously) that there are 32 horizontal lines. What is less obvious is that the lines are numbered 1,3,5,7... since this device is a reduced version of the 128x64 Display. The code takes this into account.
 
 However the code is "not 64 line" ready, meaning... for a 64 line display, the code needs to be reviewed and adjusted accordingly. (I'll fix the code if/when I get a 64 line display - anyone want to send me a SSD1306 128x64 OLED device?)
 
