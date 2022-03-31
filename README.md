@@ -1,22 +1,14 @@
 # Raspberry Pi Pico with SPI SSD1306 display
-This text is in active development: March 30, 2022  
-Content to come:
-* font module
-***
-
 ![Desktop setup](pico+ssd1306.png)
-
-
-***
 
 I had a new pico on my desktop along with an [Adafruit SSD1306 OLED display unit](https://www.adafruit.com/product/661), and the exercise was for the display unit to do pretty stuff.
 
 ***
 
 ## Inspiration:
-The "hard" part of the code came from the guys in Delhi at [techatronic](https://techatronic.com/) (Hey, thanks guys!), with the base SPI and device driver code.
+The "hard" part of the code came from the guys in Delhi at [Techatronic](https://techatronic.com/) (Hey, thanks guys!), with the base SPI and device driver code.
 
-Their page [SSD1306 RASPBERRY PI PICO](https://techatronic.com/ssd1306-raspberry-pi-pico/) has the wiring and driver code (`ssd1306.py`), which I have included in the file list.
+The Techatronic page [SSD1306 RASPBERRY PI PICO](https://techatronic.com/ssd1306-raspberry-pi-pico/) has the wiring and driver code (`ssd1306.py`), which I have included in the file list.
 
 ***
 
@@ -62,7 +54,7 @@ The clock in the videos shows real time. This is only because I started the cloc
 ***
 
 #### The font module
-This was interesting. I don't know of any font to pixel translation or such and experimented with different ways. Eventually I found an old program: `printerbanner` on... well this is embarassing really. It was on the Windows Ubuntu platform. Now, I'm not running Ubuntu anywhere (besides the Windows WSL platform) and in particular it's not available on Raspberry PiOS.
+This was interesting. I don't know of any font to pixel translation or such and experimented with different ways to build character maps. Eventually I found an old program: `printerbanner` on... well this is embarassing really. It was on the Windows Ubuntu platform. Now, I'm not running Ubuntu anywhere (besides the Windows WSL platform) and in particular it's not available on Raspberry PiOS.
 
 `printerbanner` has the feature where you can specify the font size - in my case I wanted a font size of 28 pixels. (See **Design Limitation**: I will need to regenerate the font if I get a 64 line SSD1306 OLED Display).
 
