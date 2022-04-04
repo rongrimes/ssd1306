@@ -21,8 +21,7 @@ credit: https://techatronic.com/ssd1306-raspberry-pi-pico/
 
 ## My Demo Programs
 ### Program: `ssd1306main.py`
-[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20main%20display.mp4)
-(Sorry, you need to view in a separate window for now.)
+[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20main%20display.gif)
 
 Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
@@ -40,8 +39,7 @@ The clock display and simple counter use the font module.
 ***
 ### Program: `ssd1306clock.py`
 
-[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20clock.mp4)
-(Sorry, you need to view in a separate window for now.)
+[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20clock.gif)
 
 Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
