@@ -41,8 +41,6 @@ The clock display and simple counter use the font module.
 
 ![](pico%2Bssd1306%20clock.gif)
 
-Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
-
 This video simply shows a 20 second period over a minute boundary.
 
 ### Clock Notes:
