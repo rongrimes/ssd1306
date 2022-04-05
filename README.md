@@ -21,8 +21,7 @@ credit: https://techatronic.com/ssd1306-raspberry-pi-pico/
 
 ## My Demo Programs
 ### Program: `ssd1306main.py`
-[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20main%20display.mp4)
-(Sorry, you need to view in a separate window for now.)
+![](pico%2Bssd1306%20main%20display.gif)
 
 Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
@@ -40,8 +39,7 @@ The clock display and simple counter use the font module.
 ***
 ### Program: `ssd1306clock.py`
 
-[video:](https://github.com/rongrimes/ssd1306/blob/main/pico%2Bssd1306%20clock.mp4)
-(Sorry, you need to view in a separate window for now.)
+![](pico%2Bssd1306%20clock.gif)
 
 Note: the rolling scan lines are a feature of the video process and do not appear on the SSD1306 device on the desktop.
 
@@ -54,7 +52,7 @@ The clock in the videos shows real time. This is only because I started the cloc
 ***
 
 #### The font module
-This was interesting. I don't know of any font to pixel translation or such and experimented with different ways to build character maps. Eventually I found an old program: `printerbanner` on... well this is embarassing really. It was on the Windows Ubuntu platform. Now, I'm not running Ubuntu anywhere (besides the Windows WSL platform) and in particular it's not available on Raspberry PiOS.
+This was interesting. I don't know of any font to pixel translation or such and experimented with different ways to build character maps. Eventually I found an old program: `printerbanner` on... well this is embarassing really. It was on the Windows Ubuntu platform. Now, I'm not running Ubuntu anywhere (besides the Windows WSL platform) and in particular it's not available on Raspberry Pi OS.
 
 `printerbanner` has the feature where you can specify the font size - in my case I wanted a font size of 28 pixels. (See **Design Limitation**: I will need to regenerate the font if I get a 64 line SSD1306 OLED Display).
 
