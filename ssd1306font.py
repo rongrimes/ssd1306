@@ -1,4 +1,4 @@
-
+PICO_FOLDER = "/ssd1306"
 
 class Display_font():
     def __init__(self, file):
@@ -39,7 +39,7 @@ class Display_font():
                 return line[0], char_list, True # we have new font char in col 1.
     
 if __name__ == "__main__":
-    display = Display_font("font28.txt")
+    display = Display_font(PICO_FOLDER + "/" + "font28.txt")
     if display.font is None:
         print("File not found. Abandoning!")
     print(display.font_height)

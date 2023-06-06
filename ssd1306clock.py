@@ -3,9 +3,14 @@
 
 # Frame buffer stuff:
 #       https://docs.micropython.org/en/latest/library/framebuf.html
+PICO_FOLDER = "/ssd1306"
+
+import sys
+sys.path.append(PICO_FOLDER)
+#print(sys.path)
 
 from machine import Pin, SPI, RTC
-from ssd1306 import SSD1306_SPI
+from ssd1306driver import SSD1306_SPI
 from ssd1306font import Display_font
 
 import framebuf
@@ -33,7 +38,7 @@ def ssd_text(string, font, char_height, offset=1):
 spi = SPI(0, 100000, mosi=Pin(19), sck=Pin(18))
 #                 (width, height, spi, dc,      res,     cs, external_vcc=False):  
 oled = SSD1306_SPI(128, 64,       spi, Pin(17), Pin(20), Pin(16))
-font = Display_font("font28.txt")
+font = Display_font(PICO_FOLDER + "/" + "font28.txt")
 fontsize = font.font_height
 ssd_font = font.font
 
@@ -52,4 +57,4 @@ try:
         
         sleep_ms(wait)
 except KeyboardInterrupt:
-    pass
+    ssd_text("", ssd_font, fontsize, 30)
